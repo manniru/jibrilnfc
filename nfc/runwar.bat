@@ -1,0 +1,1 @@
+java -jar jr.jar target/nfc.war
