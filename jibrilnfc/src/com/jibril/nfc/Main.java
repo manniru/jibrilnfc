@@ -154,21 +154,7 @@ public class Main extends Activity{
         } catch (MalformedMimeTypeException e) { }
         mNdefExchangeFilters = new IntentFilter[] { ndefDetected };
         
-        /**
-        Button registerbtn = (Button) findViewById(R.id.registerbtn);
-        registerbtn.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				//Toast.makeText(ctx, "you click register", Toast.LENGTH_LONG ).show();
-				Intent i = new Intent(getApplicationContext(), Register.class);
-				startActivity(i);
-			}
-		});
-        */
-        
-        //Db db = new Db(ctx);
-        //User user = db.getUser(1);
-        //Log.d("JibrilNFC", "user2name="+user.getFullname());
+
 		
 	}
 
@@ -251,19 +237,7 @@ public class Main extends Activity{
 	        String url = "http://"+serverip+":8080/nfc/json.jsp?mobileno="+phone+"&tagid="+tagid;;
 	        if(serverip.equals("192.168.0.5")) url = "http://"+serverip+":8080/nfc/json.jsp?mobileno="+phone+"&tagid="+tagid;
 	        Log.d("url=", url);
-	        ///String rtn = makeGetRequest(url); // getInputStreamFromUrl(url); // 
-	        //String rtn = rtn1.toString();
-	       /// Log.d("JibrilNfc_url=", url);
-	        ///Log.d("JibrilNfc2=", rtn);
-	        
-			//Toast.makeText(this, this.getString(R.string.ok_detection) + mytag.toString(), Toast.LENGTH_LONG ).show();
-			///Toast.makeText(this, s, Toast.LENGTH_LONG ).show();
-			///Toast.makeText(this, rtn, Toast.LENGTH_LONG ).show();
-			
-			
-			
-			
-			///new HttpAsyncTask().execute("http://hmkcode.appspot.com/rest/controller/get.json");
+
 			new HttpAsyncTask().execute(url);
 			       
 		}
